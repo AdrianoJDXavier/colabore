@@ -11,21 +11,22 @@ class Contrato {
     public $links;
     public $id;
     public $situacao;
+    public $valor;
 
-    public function setContrato($numContrato, $Objeto_contrato, $data_inicio, $data_fim, $num_ano, $modalidade, $documentos, $links, $id, $situacao) {
+    public function setContrato($numContrato, $Objeto_contrato, $data_inicio, $data_fim, $num_ano, $modalidade, $documentos, $links, $situacao, $valor) {
         $this->numContrato = $numContrato;
         $this->Objeto_contrato = $Objeto_contrato;
-        $this->data_inicio = strtotime(str_replace('/', '-', $data_inicio));
-        $this->data_fim = strtotime(str_replace('/', '-', $data_fim));
+        $this->data_inicio = $data_inicio;
+        $this->data_fim = $data_fim;
         $this->num_ano = $num_ano;
         $this->modalidade = $modalidade;
         $this->documentos = $documentos;
         $this->links = $links;
-        $this->id = $id;
         $this->situacao = $situacao;
+        $this->$valor = $valor;
     }
 
-    public function getContrato($numContrato, $Objeto_contrato, $data_inicio, $data_fim, $num_ano, $modalidade, $documentos, $links, $id, $situacao) {
+    public function getContrato($numContrato, $Objeto_contrato, $data_inicio, $data_fim, $num_ano, $modalidade, $documentos, $links, $id, $situacao, $valor) {
         $this->numContrato = $numContrato;
         $this->Objeto_contrato = $Objeto_contrato;
         $this->data_inicio = strtotime(str_replace('/', '-', $data_inicio));
@@ -36,6 +37,7 @@ class Contrato {
         $this->links = $links;
         $this->id = $id;
         $this->situacao = $situacao;
+        $this->valor = $valor;
     }
 
     
@@ -155,6 +157,18 @@ class Contrato {
     public function setSituacao($situacao)
     {
         $this->situacao = $situacao;
+
+        return $this;
+    }
+
+    public function getValor()
+    {
+        return $this->valor;
+    }
+
+    public function setValor($valor)
+    {
+        $this->valor = $valor;
 
         return $this;
     }

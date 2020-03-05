@@ -69,7 +69,7 @@ switch ($opcao) {
 
     $_SESSION['participantes'] = $lista;
 
-    header("Location:../View/Participante/exibirParticipantes.php?paginas=$numpaginas");
+    header("Location:../View/Participante/exibirParticipantes.php?paginas=$numpaginas&pagina=$pagina");
     break;
 }
 ?>

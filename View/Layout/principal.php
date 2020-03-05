@@ -54,7 +54,7 @@ if (isset($_SESSION['usuario'])) {
             </div>
 
             <!--logo start-->
-            <a href="../Home/home.php" class="logo">Colabore
+            <a href="../../Controller/ContratoController.php?opcao=7" class="logo">Colabore
                 <span class="lite">GA</span>
             </a>
             <!--logo end-->
@@ -119,10 +119,10 @@ if (isset($_SESSION['usuario'])) {
                         </a>
                         <ul class="sub">
                             <li>
-                                <a class="" href="cadastrar contrato">Cadastrar Contrato</a>
+                                <a class="" href="../Contrato/cad_contrato.php">Cadastrar Contrato</a>
                             </li>
                             <li>
-                                <a class="" href="contratos">Listar contratos</a>
+                                <a class="" href="../../Controller/ContratoController.php?opcao=6&pagina=1">Listar contratos</a>
                             </li>
                         </ul>
                     </li>
@@ -149,10 +149,10 @@ if (isset($_SESSION['usuario'])) {
                         </a>
                         <ul class="sub">
                             <li>
-                                <a class="" href="listar pessoaF">TOR Pessoa Fisica</a>
+                                <a class="" href="../TermoReferencia/TORpessoafisica.php">TOR Pessoa Fisica</a>
                             </li>
                             <li>
-                                <a class="" href="PessoaJ">TOR Pessoa Juridica</a>
+                                <a class="" href="../TermoReferencia/TORpessoaJuridica.php">TOR Pessoa Juridica</a>
                             </li>
                             <li>
                                 <a class="" href="Eventos">TOR Eventos</a>
