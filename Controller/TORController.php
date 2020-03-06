@@ -46,7 +46,7 @@ switch ($opcao) {
     session_start();
     $tor = new Tor();
     $tor->$tor->setContrato($_REQUEST['tipo'], $_REQUEST['titulo'], $_REQUEST['acao'], $_REQUEST['componente'],$_REQUEST['entidade'], $_REQUEST['endereco'], $_REQUEST['nome'], $_REQUEST['telefone'], $_REQUEST['problema'], $_REQUEST['objetivo_geral'], $_REQUEST['objetivoEsp'], $_REQUEST['atividade'], $_REQUEST['produtos'], $_REQUEST['apresentacao'], $_REQUEST['inicio'], $_REQUEST['fim'], $_REQUEST['CustosContratado'], $_REQUEST['CustosContratante'], $_REQUEST['pagamento'], $_REQUEST['tor']);
-
+        
     $tor->setNumTor($_REQUEST['id']);
 
     $torDao = new TorDAO();

@@ -45,7 +45,7 @@ class TorDAO
         $sql->bindValue(18, $tor->getCusto_contratante());
         $sql->bindValue(19, $tor->getForma_pagamento());
         $sql->bindValue(20, $tor->getTor());
-
+        
         $sql->execute();
     }
 

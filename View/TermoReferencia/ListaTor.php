@@ -1,6 +1,9 @@
 <?php
 include_once('../Layout/principal.php');
-if(empty($tors)){
+$numpaginas = $_REQUEST['paginas'];
+
+if (empty($_SESSION['tors'])) {
+    $_SESSION['tors'];
 ?>
         <section class="panel">
         <header class="panel-heading">
@@ -30,7 +33,7 @@ if(empty($tors)){
                     <th><i class="icon_cog"></i> Ações</th>
                 </tr>
                 <?
-                foreach($tors as $tor){
+                foreach($_SESSION['tors'] as $tor){
                     ?>
                     <tr>
                         <td><?=$tor->numTor?></td>
