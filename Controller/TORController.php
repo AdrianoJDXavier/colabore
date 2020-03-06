@@ -14,7 +14,7 @@ switch ($opcao) {
 
     $torDao->TorDAO();
     $torDao->incluirTor($tor);
-    header("Location:TorController.php?opcao=6&pagina=1");
+    header("Location:TORController.php?opcao=6&pagina=1");
     break;
 
     case 2:
@@ -22,7 +22,7 @@ switch ($opcao) {
     $lista = $torDao->getTors();
     session_start();
     $_SESSION['tors'] = $lista;
-    header("Location:TorController.php?opcao=6&pagina=1");
+    header("Location:TORController.php?opcao=6&pagina=1");
     break;
 
     case 3:
@@ -51,7 +51,7 @@ switch ($opcao) {
 
     $torDao = new TorDAO();
     $torDao->atualizaTor($tor);
-        header("Location:TorController.php?opcao=6&pagina=1");
+        header("Location:TORController.php?opcao=6&pagina=1");
     break;
 
     case 6:

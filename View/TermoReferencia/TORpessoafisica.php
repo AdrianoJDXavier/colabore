@@ -7,7 +7,7 @@ include_once('../Layout/principal.php');
         </header>
         <div class="panel-body">
             <div class="form">
-                <form class="form-validate form-horizontal " id="register_form" method="get" action="../../Controller/ParticipanteController.php">
+                <form class="form-validate form-horizontal " id="register_form" method="get" action="../../Controller/TORController.php">
                 <input type="hidden" name="opcao" value="1">
                     <div class="container">
 

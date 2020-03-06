@@ -25,7 +25,6 @@ class TorDAO
         $sql = $this->con->prepare("INSERT INTO tor
         (tipo, titulo, plano_trabalho, TituloComponente, entidade, endereco, nome, telefone, problema, objetivo_geral,  objetivo_especifico, Problema_atividade, objetivo_produto, objetivo_apresentacao, data_inicio, data_fim, custo_contratado,custo_contratante, forma_pagamento, tor) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
         ");
-
         $sql->bindValue(1, $tor->getTipo());
         $sql->bindValue(2, $tor->getTitulo());
         $sql->bindValue(3, $tor->getPlano_trabalho());
