@@ -7,7 +7,8 @@ include_once('../Layout/principal.php');
         </header>
         <div class="panel-body">
             <div class="form">
-                <form class="form-validate form-horizontal " id="register_form" method="get" action="criaTermo">
+                <form class="form-validate form-horizontal " id="register_form" method="get" action="../../Controller/ParticipanteController.php">
+                <input type="hidden" name="opcao" value="1">
                     <div class="container">
 
                         <ul class="nav nav-tabs">
