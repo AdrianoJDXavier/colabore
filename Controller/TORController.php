@@ -39,7 +39,7 @@ switch ($opcao) {
     $id = (int) $_REQUEST['id'];
     $torDao = new TorDAO();
     $torDao->deletaTor($id);
-    header("Location:TorController.php?opcao=6&pagina=1");
+    header("Location:TORController.php?opcao=6&pagina=1");
     break;
 
     case 5:

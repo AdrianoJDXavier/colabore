@@ -3,7 +3,7 @@ include_once('../Layout/principal.php');
 ?>
     <section class="panel">
         <header class="panel-heading">
-            Termo de Referencia Pessoa Fisica
+            Termo de Referencia Pessoa Juridica
         </header>
         <div class="panel-body">
             <div class="form">
@@ -13,10 +13,10 @@ include_once('../Layout/principal.php');
 
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#home">Identificação</a></li>
-                            <li><a data-toggle="tab" href="#menu1">Contrantante</a></li>
+                     <li><a data-toggle="tab" href="#menu1">Contrantante</a></li>
                             <li><a data-toggle="tab" href="#menu2">Antecedentes</a></li>
                             <li><a data-toggle="tab" href="#menu3">Objetivos</a></li>
-                            <li><a data-toggle="tab" href="#menu4">Atividades/Produtos</a></li>
+                           <li><a data-toggle="tab" href="#menu4">Atividades/Produtos</a></li>
                             <li><a data-toggle="tab" href="#menu5">Apresentação</a></li>
                             <li><a data-toggle="tab" href="#menu6">Prazos</a></li>
                             <li><a data-toggle="tab" href="#menu7">Custos</a></li>
@@ -26,7 +26,7 @@ include_once('../Layout/principal.php');
                             <div id="home" class="tab-pane fade in active" style=" height: 470px;">
                                 <br>
                                 <div class="form-group ">
-                                    <label for="nome" class="control-label col-lg-2">Tipo <span
+                                    <label for="tipo" class="control-label col-lg-2">Tipo <span
                                                 class="required">*</span></label>
                                     <div class="col-lg-10">
                                         <div class="col-lg-3">
@@ -51,19 +51,12 @@ include_once('../Layout/principal.php');
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group ">
-                                    <label for="numTor" class="control-label col-lg-2">Número do TOR <span
-                                                class="required">*</span></label>
-                                    <div class="col-lg-4">
-                                        <input class=" form-control" id="numTor" name="NumTor" type="text"/>
-                                    </div>
-                                </div>
                                 <center><h3>Identificação do TOR</h3></center>
                                 <div class="form-group ">
                                     <label for="titulo" class="control-label col-lg-2">Titulo do TOR <span
                                                 class="required">*</span></label>
                                     <div class="col-lg-10">
-                                        <input class="form-control" id="titulo" name="titulo" type="text" placeholder="(Especificação da atividade a ser contratada) (O título deve se referir à atividade e não ao nome do contratado.)
+                                <input class="form-control" id="titulo" name="titulo" type="text" placeholder="(Especificação da atividade a ser contratada) (O título deve se referir à atividade e não ao nome do contratado.)
 "/>
                                     </div>
                                 </div>
@@ -72,7 +65,7 @@ include_once('../Layout/principal.php');
                                                 class="required">*</span></label>
                                     <div class="col-lg-10">
                                         <input class="form-control " id="acao" name="acao" type="text"
-                                               placeholder="(Descrição da etapa/fase prevista no Plano de Ação e de Investimentos e Plano de Aquisições)."/>
+                                        placeholder="(Descrição da etapa/fase prevista no Plano de Ação e de Investimentos e Plano de Aquisições)."/>
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -85,7 +78,7 @@ include_once('../Layout/principal.php');
                                 </div>
                                 <div class="form-group ">
                                     <a data-toggle="tab" href="#menu1">
-                                        <button class="btn btn-primary">Avançar</button>
+                                        <button class="btn btn-primary next">Avançar</button>
                                     </a>
                                 </div>
                             </div>
@@ -100,10 +93,10 @@ include_once('../Layout/principal.php');
                                     </div>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="endereço" class="control-label col-lg-2">Endereço <span
+                                    <label for="endereco" class="control-label col-lg-2">Endereço <span
                                                 class="required">*</span></label>
                                     <div class="col-lg-10">
-                                        <input class="form-control " id="endereço" name="endereço" type="text"
+                                        <input class="form-control " id="endereco" name="endereco" type="text"
                                                placeholder="(Rua, Avenida, Número, Apartamento, Sala, Bairro, Cidade, Estado e CEP) "/>
                                     </div>
                                 </div>
@@ -125,10 +118,10 @@ include_once('../Layout/principal.php');
                                 </div>
                                 <div class="form-group ">
                                     <a data-toggle="tab" href="#home">
-                                        <button class="btn btn-primary">Retornar</button>
+                                        <button class="btn btn-primary previous">Retornar</button>
                                     </a>
                                     <a data-toggle="tab" href="#menu2">
-                                        <button class="btn btn-primary">Avançar</button>
+                                        <button class="btn btn-primary next">Avançar</button>
                                     </a>
                                 </div>
                             </div>
@@ -154,10 +147,10 @@ include_once('../Layout/principal.php');
                             <div id="menu3" class="tab-pane fade" style=" height: 450px;">
                                 <center><h3>Objetivo da Contratação</h3></center>
                                 <div class="form-group ">
-                                    <label for="objetivoGeral" class="control-label col-lg-2">Objetivo Geral <span
+                                    <label for="objetivo_geral" class="control-label col-lg-2">Objetivo Geral <span
                                                 class="required">*</span></label>
                                     <div class="col-lg-10">
-                            <textarea class="form-control" id="objetivoGeral" name="objetivoGeral" rows="7"
+                            <textarea class="form-control" id="objetivo_geral" name="objetivo_geral" rows="7"
                                       placeholder="(Descrição concisa e clara do objeto deste TOR, tendo como referência o diagnóstico e a situação, bem como os objetivos a serem alcançados.)"></textarea>
                                     </div>
                                 </div>
@@ -304,18 +297,56 @@ Os documentos deverão ser encaminhados ao Contratante, em versão preliminar e,
                                                placeholder=""/>
                                     </div>
                                 </div>
+                                <input class="form-control " id="tor" name="tor" type="hidden" value="Pessoa Juridica" />
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-10">
                                         <button class="btn btn-primary" type="submit">Cadastrar</button>
                                         <button class="btn btn-default" type="reset">Cancelar</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
                 </form>
             </div>
+        </div>
+        </div>
+        </form>
+        </div>
     </section>
-    <?php
+    <script>
+    $(document).ready(function() {
+    /*disable non active tabs*/
+    $('.nav li').not('.active').addClass('disabled');
+    $('.nav li').not('.active').find('a').removeAttr("data-toggle");
+
+    $('button.next').click(function(){
+        $lia = $('.nav li.active');
+        $li = $('.nav li.active').next('li');
+
+        /*enable next tab*/
+        $li.removeClass('disabled');
+        $li.find('a').attr("data-toggle","tab");
+        /*toggle tab*/
+        $li.find('a').click();
+
+        /*disable previous tab*/
+        $lia.addClass('disabled');
+        $lia.find('a').removeAttr("data-toggle");
+    });
+    $('button.previous').click(function(){
+        $lia = $('.nav li.active');
+        $li = $('.nav li.active').prev('li');
+
+        /*enable next tab*/
+        $li.removeClass('disabled');
+        $li.find('a').attr("data-toggle","tab");
+        /*toggle tab*/
+        $li.find('a').click();
+
+        /*disable previous tab*/
+        $lia.addClass('disabled');
+        $lia.find('a').removeAttr("data-toggle");
+    });
+});
+    </script>
+<?php
 include_once('../Layout/rodape.php');
 ?>

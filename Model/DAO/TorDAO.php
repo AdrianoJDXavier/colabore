@@ -46,7 +46,12 @@ class TorDAO
         $sql->bindValue(19, $tor->getForma_pagamento());
         $sql->bindValue(20, $tor->getTor());
         
-        $sql->execute();
+        if($sql->execute()){
+            echo "Cadastro realizado com sucesso!";
+        }else{
+            print_r ($this->con->errorInfo());	
+            exit();
+        }
     }
 
 
