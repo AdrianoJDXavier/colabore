@@ -22,7 +22,7 @@ switch ($opcao) {
                 session_start();
                 $_SESSION['Logado'] = true;
                 $_SESSION['usuario'] = $user;
-                header("Location:../index.php");
+                header("Location:ContratoController.php?opcao=7");;
         }
     }
     break;

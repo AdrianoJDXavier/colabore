@@ -136,41 +136,12 @@ class ContratoDAO
 
     public function ContratosAVencer()
     {
-        $contratoDAO = new ContratoDAO();
-        $contratos = $contratoDAO->getContratos();
-        foreach ($contratos as $contrato) {
-            $data_inicial = $contrato->data_inicio;
-            $data_final = $contrato->data_fim;
-            $data_atual = date("Y-m-d");
-            // retorna número de dias entre a data inicial e final
-            $dias_dtInicial_x_dtFinal = $this->diferencaEmDias($data_inicial, $data_final);
-
-            // retorna número de dias entre a data atual e final
-            $dias_dtAtual_x_dtFinal = $this->diferencaEmDias($data_atual, $data_final);
-
-            // retorna número de dias entre a data atual e inicial
-            $dias_dtAtual_x_dtInicial = $this->diferencaEmDias($data_inicial, $data_atual);
-
-            $porcentagem = 100 - (round((($dias_dtAtual_x_dtInicial / $dias_dtInicial_x_dtFinal) * 100), 2));
-            $lista[] = $porcentagem;
-            if ($porcentagem <= 30) {
-                $dl = $this->con->prepare("update contrato set situacao='A vencer' where id = :id");
-
-                $dl->bindValue(':id', $contrato->id);
-                $dl->execute();
-            } else
-                $dl = $this->con->prepare("update contrato set situacao='' where id = :id");
-
-            $dl->bindValue(':id', $contrato->id);
-            $dl->execute();
-        }
         $dl = $this->con->prepare("select *from contrato where situacao = 'A vencer'");
         $dl->execute();
         $lista = array();
         while ($row = $dl->fetch(PDO::FETCH_OBJ)) {
             $lista[] = $row;
         }
-
         return $lista;
     }
 

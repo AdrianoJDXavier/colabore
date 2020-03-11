@@ -71,7 +71,7 @@ switch ($opcao) {
     case 7:
         $contratoDao = new ContratoDAO();
     
-        $lista = $contratoDao->venceContrato();
+        $lista = $contratoDao->ContratosAVencer();
     
         session_start();
     

@@ -106,7 +106,7 @@ if (isset($_SESSION['usuario'])) {
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">
                     <li class="active">
-                        <a class="" href="/">
+                        <a class="" href="../../Controller/ContratoController.php?opcao=7">
                             <i class="icon_house_alt"></i>
                             <span>Home</span>
                         </a>

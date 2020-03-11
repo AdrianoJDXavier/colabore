@@ -1,5 +1,6 @@
 <?php
 include_once('../Layout/principal.php');
+$contratos = $_SESSION['contratos_vencer'];
 ?>
     <div class="row">
         <div class="col-lg-12">
@@ -70,18 +71,21 @@ include_once('../Layout/principal.php');
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($contratos as $contrato)
+                                <?
+                                foreach($contratos as $contrato){
+                                    ?>
                                 <tr>
-                                    <td>{{$contrato->numContrato}}</td>
-                                    <td>{{$contrato->Objeto_contrato}}</td>
+                                    <td><?=$contrato->numContrato?></td>
+                                    <td><?=$contrato->Objeto_contrato?></td>
                                     <?php 
                                     $data_atual = strtotime(date("Y-m-d"));
                                     $data_fim = strtotime($contrato->data_fim);
                                     $diferença = (int)(($data_fim - $data_atual)/86400);
                                     ?>
-                                    <td>{{$diferença}} dias</td>
-                                    <td>{{date( 'd/m/Y' , strtotime($contrato->data_fim))}}</td>
-                                </tr>@endforeach
+                                    <td><?=$diferença?> dias</td>
+                                    <td><?=date( 'd/m/Y' , strtotime($contrato->data_fim))?></td>
+                                </tr>
+                                <?}?>
                                 </tbody>
                             </table>
 
